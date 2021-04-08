@@ -1,14 +1,12 @@
 {
     "name": "iguoji/minimal-cache",
     "type": "library",
-    "description": "Redis Cache",
+    "description": "support file or redis cache",
     "keywords": ["cache", "redis"],
-    "homepage": "https://github.com/iguoji/minimal-redis",
+    "homepage": "https://github.com/iguoji/minimal-cache",
     "license": "Apache-2.0",
     "require": {
-        "php": "^8.0",
-        "iguoji/minimal-support": "dev-master",
-        "iguoji/minimal-pool": "dev-master"
+        "php": "^8.0"
     },
     "autoload": {
         "psr-4": {
