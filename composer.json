@@ -6,7 +6,8 @@
     "homepage": "https://github.com/iguoji/minimal-cache",
     "license": "Apache-2.0",
     "require": {
-        "php": "^8.0"
+        "php": "^8.0",
+        "ext-swoole": ">4.5"
     },
     "autoload": {
         "psr-4": {
