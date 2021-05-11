@@ -167,7 +167,7 @@ class File extends Driver
     /**
      * 判断数据
      */
-    public function has(int|string $key) : bool
+    public function has(string|int $key) : bool
     {
         return $this->getRaw((string) $key) !== null;
     }
@@ -175,7 +175,7 @@ class File extends Driver
     /**
      * 读取数据
      */
-    public function get(int|string $key, mixed $default = null) : mixed
+    public function get(string|int $key, mixed $default = null) : mixed
     {
         $raw = $this->getRaw((string) $key);
 
@@ -185,7 +185,7 @@ class File extends Driver
     /**
      * 写入数据
      */
-    public function set(int|string $key, mixed $value, int $expire = null) : bool
+    public function set(string|int $key, mixed $value, int $expire = null) : bool
     {
         if (is_null($expire)) {
             $expire = $this->config['expire'];
@@ -224,7 +224,7 @@ class File extends Driver
     /**
      * 自增数据
      */
-    public function inc(int|string $key, int $step = 1) : int|bool
+    public function inc(string|int $key, int $step = 1) : int|bool
     {
         if ($raw = $this->getRaw((string) $key)) {
             $value  = $this->parse($raw['content']) + $step;
@@ -240,7 +240,7 @@ class File extends Driver
     /**
      * 自减数据
      */
-    public function dec(int|string $key, int $step = 1) : int|bool
+    public function dec(string|int $key, int $step = 1) : int|bool
     {
         return $this->inc($key, -$step);
     }
@@ -248,7 +248,7 @@ class File extends Driver
     /**
      * 删除数据
      */
-    public function delete(int|string $key) : bool
+    public function delete(string|int $key) : bool
     {
         return $this->unlink($this->getCacheKey((string) $key));
     }

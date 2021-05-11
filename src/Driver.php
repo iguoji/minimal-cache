@@ -23,32 +23,32 @@ abstract class Driver
     /**
      * 判断数据
      */
-    abstract public function has(int|string $key) : bool;
+    abstract public function has(string|int $key) : bool;
 
     /**
      * 读取数据
      */
-    abstract public function get(int|string $key, mixed $default = null) : mixed;
+    abstract public function get(string|int $key, mixed $default = null) : mixed;
 
     /**
      * 写入数据
      */
-    abstract public function set(int|string $key, mixed $value, int $expire = null) : bool;
+    abstract public function set(string|int $key, mixed $value, int $expire = null) : bool;
 
     /**
      * 自增数据
      */
-    abstract public function inc(int|string $key, int $step = 1) : int|bool;
+    abstract public function inc(string|int $key, int $step = 1) : int|bool;
 
     /**
      * 自减数据
      */
-    abstract public function dec(int|string $key, int $step = 1) : int|bool;
+    abstract public function dec(string|int $key, int $step = 1) : int|bool;
 
     /**
      * 删除数据
      */
-    abstract public function delete(int|string $key) : bool;
+    abstract public function delete(string|int $key) : bool;
 
     /**
      * 清空数据

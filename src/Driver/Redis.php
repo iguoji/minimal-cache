@@ -110,7 +110,7 @@ class Redis extends Driver
     /**
      * 自增数据
      */
-    public function inc(int|string $key, int $step = 1) : int|bool
+    public function inc(string|int $key, int $step = 1) : int|bool
     {
         return $this->__call('incrby', [$key, $step]);
     }
@@ -118,7 +118,7 @@ class Redis extends Driver
     /**
      * 自减数据
      */
-    public function dec(int|string $key, int $step = 1) : int|bool
+    public function dec(string|int $key, int $step = 1) : int|bool
     {
         return $this->__call('decrby', [$key, $step]);
     }
